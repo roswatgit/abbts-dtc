@@ -15,8 +15,10 @@ fun main() {
     // Done: Den Fehler im Programm finden und beheben
     // Done: Den Spieler nach dem Namen fragen
     // Done: Solange spielen bis Spieler abbricht
-    // Todo: Ausgeben, wer mehr Runden gewonnen hat
+    // Done: Ausgeben, wer mehr Runden gewonnen hat
 
+    var rundenUser = 0
+    var rundenComputer = 0
 
     println("wie ist dein Vorname?")
     var vorname = readln()
@@ -33,11 +35,18 @@ fun main() {
 
     println("Du würfelst: $playerScore  --  Computer würfelt: $computerScore")
     when {
-        playerScore > computerScore -> println("Du gewinnst")
-        playerScore < computerScore -> println("Der Computer gewinnt")
+        playerScore > computerScore -> {
+            println("Du gewinnst")
+            rundenUser ++
+        }
+        playerScore < computerScore -> {
+            println("Der Computer gewinnt")
+            rundenComputer ++
+        }
         else -> println("Unentschieden")
     }
 
     } while ((neinJa != 0) )
-
+    println("Du hast " +rundenUser+ " Runden gewonnen")
+    println("Der Computer hat " +rundenComputer+ " Runden gewonnen")
 }
