@@ -1,3 +1,4 @@
+
 import kotlin.random.Random
 import kotlin.random.nextInt
 
@@ -11,19 +12,24 @@ import kotlin.random.nextInt
 
 fun main() {
 
-    val aDie = Random
-
-    val playerScore = aDie.nextInt(1..6)
-    val computerScore = aDie.nextInt(1..6)
-
     // Done: Den Fehler im Programm finden und beheben
     // Done: Den Spieler nach dem Namen fragen
-    // Todo: Solange spielen bis Spieler abbricht
+    // Done: Solange spielen bis Spieler abbricht
     // Todo: Ausgeben, wer mehr Runden gewonnen hat
+
 
     println("wie ist dein Vorname?")
     var vorname = readln()
     println("dein Name ist $vorname")
+
+    do {
+        println("weiter spielen Nein=0, Ja=1")
+        var neinJa = readln().toInt()
+
+    val aDie = Random
+
+    val playerScore = aDie.nextInt(1..6)
+    val computerScore = aDie.nextInt(1..6)
 
     println("Du würfelst: $playerScore  --  Computer würfelt: $computerScore")
     when {
@@ -31,4 +37,7 @@ fun main() {
         playerScore < computerScore -> println("Der Computer gewinnt")
         else -> println("Unentschieden")
     }
+
+    } while ((neinJa != 0) )
+
 }
