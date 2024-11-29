@@ -16,10 +16,14 @@ fun main() {
     val playerScore = aDie.nextInt(1..6)
     val computerScore = aDie.nextInt(1..6)
 
-    // Todo: Den Fehler im Programm finden und beheben
-    // Todo: Den Spieler nach dem Namen fragen
+    // Done: Den Fehler im Programm finden und beheben
+    // Done: Den Spieler nach dem Namen fragen
     // Todo: Solange spielen bis Spieler abbricht
     // Todo: Ausgeben, wer mehr Runden gewonnen hat
+
+    println("wie ist dein Vorname?")
+    var vorname = readln()
+    println("dein Name ist $vorname")
 
     println("Du würfelst: $playerScore  --  Computer würfelt: $computerScore")
     when {
