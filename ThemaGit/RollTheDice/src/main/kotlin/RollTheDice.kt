@@ -1,4 +1,5 @@
 import kotlin.random.Random
+import kotlin.random.nextInt
 
 /**
  * Simuliert ein einfaches Würfelspiel zwischen dem
