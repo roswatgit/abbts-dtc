@@ -5,7 +5,7 @@ import kotlin.random.Random
  * Computer und einem Spieler
  *
  * Autor: Andreas Wassmer
- * Version: 20241120
+ * Version: 20241129
  */
 
 fun main() {
